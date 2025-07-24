@@ -30,9 +30,9 @@ def check_booking_status(url):
             if "searchresults" in final_url:
                 return "🔁 Redirected to Listing Page"
             elif "/hotel/" in final_url and final_url != url:
-                return "➡️ Redirected to Another Hotel Page"
+                return "➡️ Redirected to Current URL for Hotel Page"
             else:
-                return "🔁 Redirected"
+                return "🔁 Redirected to Listing Page"
 
         if response.status_code == 200:
             html_text = normalize_text(response.text)
