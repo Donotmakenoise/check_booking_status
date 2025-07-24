@@ -31,7 +31,7 @@ def check_booking_status(url):
             if "searchresults" in final_url:
                 return "🔁 Redirected to Listing Page"
             elif "/hotel/" in final_url and final_url != url:
-                return "➡️ Redirected to Current URL for Hotel Page"
+                return "➡️ Redirected Hotel page to current URL format"
             else:
                 return "🔁 Redirected to Listing Page"
 
