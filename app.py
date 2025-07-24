@@ -18,6 +18,7 @@ def normalize_text(text):
 
 # Check Booking URL
 def check_booking_status(url):
+    url = url.split("?")[0]
     if pd.isna(url) or not isinstance(url, str) or not url.startswith("http"):
         return "❌ Invalid or Empty URL"
     
